@@ -13,6 +13,8 @@ libraryDependencies ++= Seq(
   "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.3" % Test
 )
 
+dockerRepository := Some("nemo83")
+
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.example.controllers._"
 
