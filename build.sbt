@@ -13,6 +13,7 @@ libraryDependencies ++= Seq(
   "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.3" % Test
 )
 
+dockerBaseImage := "openjdk:8-jre-slim"
 dockerRepository := Some("nemo83")
 
 // Adds additional packages into Twirl
