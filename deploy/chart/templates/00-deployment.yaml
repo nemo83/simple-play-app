@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: api
-          image: nemo83/simple-play-app:0.1
+          image: nemo83/simple-play-app:0.2
           ports:
             - containerPort: 9000
