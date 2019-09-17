@@ -1,7 +1,7 @@
 name := """simple-play-app"""
 organization := "com.example"
 
-version := "0.2"
+version := "0.3"
 
 lazy val root = (project in file("."))
   .enablePlugins(PlayScala)
