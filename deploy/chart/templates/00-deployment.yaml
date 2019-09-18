@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: nemo83/simple-play-app:0.5
+          image: nemo83/simple-play-app:0.6
           ports:
             - containerPort: 9000
       minReadySeconds: 15
