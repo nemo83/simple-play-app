@@ -19,3 +19,4 @@ spec:
           image: nemo83/simple-play-app:0.5
           ports:
             - containerPort: 9000
+      minReadySeconds: 15
