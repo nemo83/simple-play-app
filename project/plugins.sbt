@@ -1,3 +1,3 @@
-addSbtPlugin("com.lightbend.sbt" % "sbt-javaagent" % "0.1.4")
+addSbtPlugin("io.kamon" % "sbt-kanela-runner-play-2.6" % "2.0.2")
 
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.23")
