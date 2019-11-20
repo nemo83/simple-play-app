@@ -9,6 +9,9 @@ steps:
       - sbt stage
   - name: docker
     image: plugins/docker
+    environment:
+      DOCKER_HUB_TOKEN:
+        from_secret: DOCKER_HUB_TOKEN
     settings:
       repo: nemo83/simple-play-app
       tags: latest
