@@ -5,18 +5,15 @@ name: default
 steps:
   - name: build
     image: mozilla/sbt
-    environment:
-      DOCKER_HUB_TOKEN:
-        from_secret: DOCKER_HUB_TOKEN
     commands:
       - env
       - sbt stage
   - name: docker
     image: plugins/docker
-    environment:
-      DOCKER_HUB_TOKEN:
-        from_secret: DOCKER_HUB_TOKEN
     settings:
       repo: nemo83/simple-play-app
       tags: latest
-      auth: ${DOCKER_HUB_TOKEN}
+      username:
+        from_secret: DOCKER_HUB_USERNAME
+      password:
+        from_secret: DOCKER_HUB_TOKEN
