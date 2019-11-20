@@ -15,5 +15,5 @@ steps:
     settings:
       repo: nemo83/simple-play-app
       tags: latest
-      token:
+      auth:
         from_secret: DOCKER_HUB_TOKEN
