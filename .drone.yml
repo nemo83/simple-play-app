@@ -3,10 +3,14 @@ type: docker
 name: default
 
 steps:
+  - name: build
+    image: mozilla/sbt
+    commands:
+      - sbt stage
   - name: docker
     image: plugins/docker
     settings:
-      username: kevinbacon
-      password: pa55word
       repo: nemo83/simple-play-app
       tags: latest
+      token:
+        from_secret: DOCKER_HUB_TOKEN
