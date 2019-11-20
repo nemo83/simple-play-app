@@ -5,7 +5,11 @@ name: default
 steps:
   - name: build
     image: mozilla/sbt
+    environment:
+      DOCKER_HUB_TOKEN:
+        from_secret: DOCKER_HUB_TOKEN
     commands:
+      - env
       - sbt stage
   - name: docker
     image: plugins/docker
