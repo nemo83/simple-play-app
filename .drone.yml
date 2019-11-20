@@ -3,7 +3,10 @@ type: docker
 name: default
 
 steps:
-  - name: test
-    image: mozilla/sbt
-    commands:
-      - sbt docker:publishLocal
+  - name: docker
+    image: plugins/docker
+    settings:
+      username: kevinbacon
+      password: pa55word
+      repo: nemo83/simple-play-app
+      tags: latest
