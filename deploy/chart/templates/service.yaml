@@ -3,13 +3,10 @@ kind: Service
 metadata:
   name: simple-play-app
   labels:
+    app: simple-play-app
     release: prometheus
 spec:
   ports:
-    - name: http
-      port: 9000
-      targetPort: 9000
-      protocol: TCP
     - name: http-metrics
       port: 9095
       targetPort: 9095

@@ -4,6 +4,7 @@ metadata:
   name: simple-play-app
   labels:
     app: simple-play-app
+    release: prometheus
 spec:
   selector:
     matchLabels:
