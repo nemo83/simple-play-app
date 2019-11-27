@@ -4,15 +4,15 @@ metadata:
   name: simple-play-app
   labels:
     app: simple-play-app
+    k8s-app: simple-play-app
 spec:
   ports:
-    - port: 9000
-      targetPort: http
+    - name: http
+      port: 9000
       protocol: TCP
-      name: http
-    - port: 9095
-      targetPort: 9095
+    - name: http-metrics
+      port: 9095
+      targetPort: metrics
       protocol: TCP
-      name: prom
   selector:
     app: simple-play-app
