@@ -1,0 +1,13 @@
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: ServiceMonitor
+metadata:
+  name: simple-play-app
+  labels:
+    app: simple-play-app
+spec:
+  selector:
+    matchLabels:
+      app: simple-play-app
+  endpoints:
+    - port: prom
+      interval: 10s
