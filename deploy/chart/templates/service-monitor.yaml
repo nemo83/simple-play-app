@@ -4,6 +4,7 @@ metadata:
   name: simple-play-app
   labels:
     app: simple-play-app
+  namespace: observe
 spec:
   selector:
     matchLabels:
@@ -11,3 +12,4 @@ spec:
   endpoints:
     - port: prom
       interval: 10s
+      path: /
