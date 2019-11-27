@@ -2,8 +2,11 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   labels:
-    app: simple-play-app
+    app: prometheus-operator-grafana
     app.kubernetes.io/instance: prometheus
+    chart: prometheus-operator-8.2.4
+    heritage: Tiller
+    release: prometheus
   name: simple-play-app
   namespace: observe
 spec:
