@@ -1,9 +1,6 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  labels:
-    app: simple-play-app
-    release: prometheus
   name: simple-play-app
   namespace: observe
 spec:
