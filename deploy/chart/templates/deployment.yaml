@@ -13,6 +13,7 @@ spec:
     metadata:
       labels:
         app: simple-play-app
+        release: prometheus
     spec:
       containers:
       - name: simple-play-app
