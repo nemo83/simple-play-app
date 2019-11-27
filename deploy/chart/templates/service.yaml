@@ -6,10 +6,11 @@ spec:
   ports:
     - name: http
       port: 9000
+      targetPort: 9000
       protocol: TCP
     - name: http-metrics
       port: 9095
-      targetPort: metrics
+      targetPort: 9095
       protocol: TCP
   selector:
     app: simple-play-app
