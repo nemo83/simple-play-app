@@ -4,12 +4,15 @@ metadata:
   name: simple-play-app
   labels:
     app: simple-play-app
+    app.kubernetes.io/instance: prometheus
   namespace: observe
 spec:
   selector:
     matchLabels:
       app: simple-play-app
   endpoints:
-    - port: prom
-      interval: 10s
-      path: /
+    - path: /
+      port: service
+  namespaceSelector:
+    matchNames:
+      - default

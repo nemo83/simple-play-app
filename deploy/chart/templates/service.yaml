@@ -11,7 +11,7 @@ spec:
       protocol: TCP
       name: http
     - port: 9095
-      targetPort: http
+      targetPort: 9095
       protocol: TCP
       name: prom
   selector:
