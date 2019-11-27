@@ -14,7 +14,7 @@ steps:
       repo: nemo83/simple-play-app
       tags:
         - latest
-        - 0.1
+        - 0.2
       username:
         from_secret: DOCKER_HUB_USERNAME
       password:
