@@ -2,9 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: simple-play-app
-  labels:
-    app: simple-play-app
-    release: prometheus
 spec:
   selector:
     matchLabels:
