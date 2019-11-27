@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-play-app
+  labels:
+    app: simple-play-app
+spec:
+  selector:
+    matchLabels:
+      app: simple-play-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: simple-play-app
+    spec:
+      containers:
+      - name: simple-play-app
+        image: "nemo83/simple-play-app:latest"
