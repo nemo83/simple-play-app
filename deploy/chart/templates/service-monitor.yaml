@@ -1,17 +1,22 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: k8s-apps-http
   labels:
-    k8s-apps: http
+    app: prometheus-operator-grafana
+    app.kubernetes.io/instance: prometheus
+    chart: prometheus-operator-8.2.4
+    heritage: Tiller
+    release: prometheus
+  name: simple-play-app
+  namespace: observe
 spec:
-  jobLabel: k8s-app
-  selector:
-    matchExpressions:
-      - {key: k8s-app, operator: Exists}
+  endpoints:
+    - path: /
+      port: http-metrics
   namespaceSelector:
     matchNames:
       - default
-  endpoints:
-    - port: http-metrics
-      interval: 15s
+  selector:
+    matchLabels:
+      app: simple-play-app
+      release: prometheus
