@@ -11,8 +11,7 @@ spec:
       - {key: k8s-app, operator: Exists}
   namespaceSelector:
     matchNames:
-      - kube-system
-      - monitoring
+      - default
   endpoints:
     - port: http-metrics
       interval: 15s
