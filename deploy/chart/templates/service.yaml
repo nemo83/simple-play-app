@@ -16,4 +16,3 @@ spec:
       protocol: TCP
   selector:
     app: simple-play-app
-    release: prometheus
