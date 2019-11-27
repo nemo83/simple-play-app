@@ -13,7 +13,7 @@ scalaVersion := "2.12.8"
 libraryDependencies ++= Seq(
   guice,
   "io.kamon" %% "kamon-bundle" % "2.0.2",
-  "io.kamon" %% "kamon-graphite" % "2.0.0",
+  "io.kamon" %% "kamon-prometheus" % "2.0.0",
   "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.3" % Test
 )
 

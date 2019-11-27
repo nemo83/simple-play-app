@@ -12,7 +12,9 @@ steps:
     image: plugins/docker
     settings:
       repo: nemo83/simple-play-app
-      tags: latest
+      tags:
+        - latest
+        - 0.1
       username:
         from_secret: DOCKER_HUB_USERNAME
       password:

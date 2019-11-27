@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - name: simple-play-app
-        image: "nemo83/simple-play-app:latest"
+        image: "nemo83/simple-play-app:{{ .Values.version }}"
